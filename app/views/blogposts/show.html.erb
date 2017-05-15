@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= @blogpost.title %></h1>
+      <%= link_to 'Back', user_blogposts_path(@user) %>
+      <hr/>
+      <p>
+        <strong>Title:</strong>
+        <%= @blogpost.title %>
+      </p>
+
+    </div>
+  </div>
+</div>

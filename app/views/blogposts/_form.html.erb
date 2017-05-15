@@ -1,0 +1,24 @@
+<%= form_for(blogpost, :url => user_blogposts_path(@user)) do |f| %>
+  <% if blogpost.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger" role="alert">
+      <strong>
+        <%= pluralize(blogpost.errors.count, "error") %> prohibited this blogpost from being saved:
+      </strong>
+
+      <ul>
+      <% blogpost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, {:class => "form-control"} %>
+  </div>
+
+  <div class="field actions">
+    <%= f.submit "Create post", class: "btn btn-primary" %>
+  </div>
+<% end %>
