@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Blogposts</h1>
+
+      <% @blogposts.each do |blogpost| %>
+        <h2><%= blogpost.title %></h2>
+        <h3>Author: <%= "#{blogpost.user.first_name} #{blogpost.user.last_name}" %></h3>
+      <% end %>
+
+      <%= link_to 'New blogpost', new_user_blogpost_path(@user), {:class => "btn btn-primary btn-lg"} %>
+
+    </div>
+  </div>
+</div>

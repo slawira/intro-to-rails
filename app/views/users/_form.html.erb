@@ -30,15 +30,15 @@
 
   <div class="field">
     <%= f.label :password %>
-    <%= f.text_field :password, {:class => "form-control"} %>
+    <%= f.password_field :password, {:class => "form-control"} %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %>
-    <%= f.text_field :password_confirmation, {:class => "form-control"} %>
+    <%= f.password_field :password_confirmation, {:class => "form-control"} %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field actions">
+    <%= f.submit "Create user", class: "btn btn-primary" %>
   </div>
 <% end %>
