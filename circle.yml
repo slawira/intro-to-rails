@@ -1,0 +1,5 @@
+deployment:
+  staging:
+    branch: test
+    heroku:
+      appname: agile-wave-15613
