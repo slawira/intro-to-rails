@@ -1,5 +1,6 @@
 deployment:
   staging:
     branch: test
-    heroku:
-      appname: agile-wave-15613
+    commands:
+      - git push git@heroku.com:agile-wave-15613.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rails db:migrate --app agile-wave-15613
